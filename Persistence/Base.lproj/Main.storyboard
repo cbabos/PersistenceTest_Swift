@@ -1,26 +1,99 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Persistence" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PersistenceTestApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5XR-xK-9t9">
+                                <rect key="frame" x="16" y="20" width="288" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="CPJ-9v-1jt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" red="0.0" green="0.38297526045277785" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write anything here and push the button" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SQy-eD-aig">
+                                <rect key="frame" x="16" y="112" width="288" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="mPf-y5-KIX"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2G-as-sal">
+                                <rect key="frame" x="137" y="150" width="47" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ypx-bv-a6s"/>
+                                </constraints>
+                                <state key="normal" title="Persist"/>
+                                <connections>
+                                    <action selector="SaveNewInput:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0WF-RR-dhT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Persisted text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6P-Ob-BOv">
+                                <rect key="frame" x="16" y="242" width="288" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="9Ka-YT-tv3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oJ-gG-bx3">
+                                <rect key="frame" x="16" y="271" width="288" height="277"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="r2G-as-sal" firstAttribute="top" secondItem="SQy-eD-aig" secondAttribute="bottom" constant="8" symbolic="YES" id="0p1-lL-Vu1"/>
+                            <constraint firstItem="SQy-eD-aig" firstAttribute="trailing" secondItem="j6P-Ob-BOv" secondAttribute="trailing" id="1zX-Ww-j4u"/>
+                            <constraint firstItem="SQy-eD-aig" firstAttribute="centerX" secondItem="r2G-as-sal" secondAttribute="centerX" id="5CX-r4-Afe"/>
+                            <constraint firstItem="6oJ-gG-bx3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Fjc-1Z-A6k"/>
+                            <constraint firstItem="6oJ-gG-bx3" firstAttribute="top" secondItem="j6P-Ob-BOv" secondAttribute="bottom" constant="8" id="Fp6-tV-muW"/>
+                            <constraint firstItem="j6P-Ob-BOv" firstAttribute="top" secondItem="r2G-as-sal" secondAttribute="bottom" constant="62" id="Gdo-jm-oPK"/>
+                            <constraint firstItem="SQy-eD-aig" firstAttribute="leading" secondItem="j6P-Ob-BOv" secondAttribute="leading" id="Moy-Z2-JoT"/>
+                            <constraint firstItem="5XR-xK-9t9" firstAttribute="trailing" secondItem="SQy-eD-aig" secondAttribute="trailing" id="TYG-RU-8ev"/>
+                            <constraint firstItem="5XR-xK-9t9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Xxp-i2-0Vf"/>
+                            <constraint firstItem="5XR-xK-9t9" firstAttribute="leading" secondItem="SQy-eD-aig" secondAttribute="leading" id="c1i-2Z-NGI"/>
+                            <constraint firstItem="6oJ-gG-bx3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ddB-1A-Sd2"/>
+                            <constraint firstItem="SQy-eD-aig" firstAttribute="top" secondItem="5XR-xK-9t9" secondAttribute="bottom" constant="37" id="kAO-pe-JFV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6oJ-gG-bx3" secondAttribute="bottom" constant="20" id="lDN-U6-cGA"/>
+                            <constraint firstItem="5XR-xK-9t9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rdX-hW-hAD"/>
+                            <constraint firstItem="5XR-xK-9t9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="weH-Is-DfK"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="SavedTextField" destination="6oJ-gG-bx3" id="g0g-d6-IBC"/>
+                        <outlet property="TextInput" destination="SQy-eD-aig" id="4pg-MT-R2H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116.25" y="122.53521126760563"/>
         </scene>
     </scenes>
 </document>

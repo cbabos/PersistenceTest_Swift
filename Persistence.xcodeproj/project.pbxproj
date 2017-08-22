@@ -14,6 +14,7 @@
 		663A7EEC1F4C32670030A427 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663A7EEA1F4C32670030A427 /* LaunchScreen.storyboard */; };
 		663A7EF71F4C32670030A427 /* PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663A7EF61F4C32670030A427 /* PersistenceTests.swift */; };
 		663A7F021F4C32670030A427 /* PersistenceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663A7F011F4C32670030A427 /* PersistenceUITests.swift */; };
+		663A7F101F4C3BE30030A427 /* PersistedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663A7F0F1F4C3BE30030A427 /* PersistedData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		663A7EFD1F4C32670030A427 /* PersistenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersistenceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		663A7F011F4C32670030A427 /* PersistenceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceUITests.swift; sourceTree = "<group>"; };
 		663A7F031F4C32670030A427 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		663A7F0F1F4C3BE30030A427 /* PersistedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistedData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				663A7EE11F4C32670030A427 /* AppDelegate.swift */,
 				663A7EE31F4C32670030A427 /* ViewController.swift */,
+				663A7F0F1F4C3BE30030A427 /* PersistedData.swift */,
 				663A7EE51F4C32670030A427 /* Main.storyboard */,
 				663A7EE81F4C32670030A427 /* Assets.xcassets */,
 				663A7EEA1F4C32670030A427 /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 			files = (
 				663A7EE41F4C32670030A427 /* ViewController.swift in Sources */,
 				663A7EE21F4C32670030A427 /* AppDelegate.swift in Sources */,
+				663A7F101F4C3BE30030A427 /* PersistedData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
